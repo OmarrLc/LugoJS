@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lugo</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.css">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Rowdies&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md  fixed-top">
+        <a class="navbar-brand ml-4" href="#">lugo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+            <form class="form-inline my-2 my-lg-0 ml-auto">
+
+                <select id="listaUsuarios" class="form-control mr-sm-2 cat" onchange="cargarNombre()">
+                   
+                </select>
+                <button class="btn btnOrdenes my-2 my-sm-0" data-toggle="modal" onclick="cargarOrdenes()" data-target="#modalOrdenes" type="button">Ver Ordenes</button>
+                <button class="btn btnOrdenes my-2 my-sm-0" data-toggle="modal" data-target="#modalCategoria" type="button">Nueva Categoria</button>
+            </form>
+        </div>
+    </nav>
+
+    <main role="main" class="container">
+
+        <div class="starter-template">
+            <div class="saludo" id="saludo">
+
+            </div>
+        </div>
+        <div class="row" id="listaCategorias">
+
+        </div>
+
+
+    </main>
+    <!-- /.container -->
+
+
+
+
+    <!-- Modal Ordenes -->
+    <div class="modal fade" id="modalOrdenes" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="modalOrdenesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" id="modalHeader">
+
+
+
+                </div>
+                <div class="modal-body" id="modalBody">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btnOrdenes" data-dismiss="modal">Cerrar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Empresas -->
+    <div class="modal fade" id="modalEmpresas" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="modalEmpresasLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" id="modalHeaderEmpresas">
+
+                </div>
+                <div class="modal-body row" id="modalBodyEmpresas">
+
+
+
+                </div>
+                <div class="modal-footer ">
+                    <button type="button " class="btn btnOrdenes" data-dismiss="modal">Cerrar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal pedidos -->
+    <div class="modal fade" id="modalPedidos" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="modalPedidosLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-body row" id="modalBodyPedidos">
+                    <div class="container" id="infoProducto">
+                        <!-- <h5 class="titulo2">
+                            ckjhckjcjs
+                        </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, illo!</p> -->
+                    </div>
+                    <div class="container" id="infoBody">
+                        <div class="form-group row">
+                            <label for="cantidad" class="col-sm-5 col-form-label">Cantidad a solicitar</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="cantidad">
+                            </div>
+                        </div>
+                        <h5 class="precioDerecha my-2 my-sm-0 titulo2" id="precioPro" style="text-align: right;"> $49.99</h5>
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer ">
+                    <button type="button " class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <button type="button " class="btn btnOrdenes" onclick="nuevoPedido()">Procesar Orden</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Categoria -->
+    <div class="modal fade" id="modalCategoria" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="modalCategoriaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-body row" id="modalBodyPedidos">
+                    <div class="container" id="">
+                        <h5 class="titulo2">
+                            Nueva Categoria
+                        </h5>
+
+                    </div>
+                    <div class="container">
+                        <input id="categoriaN" type="text" class="form-control" placeholder="Nombre de Categoria">
+                        <input id="descripcionN" type="text" class="form-control" placeholder="Descripcion">
+                        <input id="iconoN" type="text" class="form-control" placeholder="Icono">
+                        <input id="colorN" type="text" class="form-control" placeholder="Color">
+                    </div>
+
+
+
+                </div>
+                <div class="modal-footer ">
+                    <button type="button " class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    <button type="button " class="btn btnOrdenes" onclick="guardarCategoria()">Guardar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.4.1.min.js "></script>
+    <script src="js/popper.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/controlador.js "></script>
+</body>
+
+</html>

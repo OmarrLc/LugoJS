@@ -1,0 +1,153 @@
+body {
+    padding-top: 5rem;
+    font-family: 'Heebo', sans-serif;
+}
+
+.starter-template {
+    text-align: left;
+}
+
+.navbar {
+    background-color: #72398C!important;
+}
+
+.navbar-brand {
+    color: white!important;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.btnOrdenes {
+    background-color: #512963;
+    color: white;
+    border: 1px solid #512963;
+    border-radius: 15px;
+    font-size: 0.7em;
+    padding: 0.5em 2em;
+    font-weight: 600;
+}
+
+.btnOrdenes:hover {
+    background-color: bisque;
+}
+
+.cat {
+    background-color: #fff;
+    color: #72398C;
+    border: 1px solid #512963;
+    border-radius: 15px;
+    font-size: 0.7em;
+    padding: 0.5em 2em;
+    font-weight: 600;
+}
+
+.cat:hover {
+    background-color: #512963;
+    color: #fff;
+}
+
+.saludo {
+    color: #72398C;
+}
+
+.saludo h2 {
+    font-weight: 600!important;
+    margin-bottom: 0;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 0.8em 0.6em;
+    color: white;
+}
+
+.cuadrado {
+    height: 2em;
+    width: 3.2em;
+    font-size: 2em;
+    color: white;
+}
+
+.modal {
+    border-radius: 0px!important;
+}
+
+.modal-header {
+    color: white;
+    font-size: 2em;
+    background-color: #4F2D60;
+    padding: 0.3em;
+}
+
+.modal-header h5 {
+    font-weight: 600!important;
+}
+
+.modalBody {
+    padding-bottom: 0.5px!important;
+}
+
+.modalBody h5 {
+    color: #7E25AA;
+    font-size: 1em;
+    font-weight: 600!important;
+}
+
+.modalBody p {
+    color: black;
+    font-size: 0.7em;
+}
+
+.modalBody h5.precioDerecha,
+.modalBodyPedidos div.container h5.precioDerecha {
+    text-align: right;
+}
+
+.contenedorImg {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.textoImagen {
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.4em;
+    font-weight: 600!important;
+}
+
+.btnPedir {
+    background-color: #512963;
+    color: white;
+    border: 1px solid #512963;
+    border-radius: 15px;
+    font-size: 0.7em;
+    padding: 0.2em 1em;
+    font-weight: 600;
+    margin-left: 35%;
+}
+
+.btnPedir:hover {
+    background-color: bisque;
+}
+
+#indexCategoria {
+    display: none;
+}
+
+.modalBodyProductos {
+    border: 0.5px solid #C9C9C9;
+    border-radius: 10px;
+}
+
+h5.titulo2 {
+    color: #7E25AA;
+    font-size: 1em;
+    font-weight: 600!important;
+}
